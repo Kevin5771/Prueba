@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+               table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Intereses</h1>
+    <form onsubmit="event.preventDefault(); calcularAmortizacion();">
+        <label for="monto">monto</label>
+        <input type="number" id="monto" name="monto" required>
+        <label for="plazo">Plazo en Meses</label>
+        <input type="number" id="plazo" name="plazo" required>
+        <label for="tasaInteres">Tasa de interés mensual (%):</label>
+        <input type="number" id="tasaInteres" name="tasaInteres" step="0.01" required><br><br>
+
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <div class="result" id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
